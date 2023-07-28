@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins:wght@400;700&display=swap');
+
+html,
+body {
+    background-color: black;
+    color: white;
+    font-family: Inter;
+}
+
+.input-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7.006px;
+    align-self: stretch;
+    font-size: 14px;
+}
+
+.form-control {
+    border-radius: 5.255px;
+    background: #1C1C1C;
+    font-size: 15px;
+    color: #999;
+    line-height: 15px; /* 100% */
+    padding: 12px;
+    outline:none;
+    width: 273px;
+}
