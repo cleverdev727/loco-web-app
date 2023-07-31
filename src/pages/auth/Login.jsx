@@ -1,13 +1,17 @@
+import React from 'react';
+import Logo from '../../assets/images/logo.png';
+import ProvectusLogo from '../../assets/images/provectus_logo.svg';
+
 const Login = () => {
     return <>
         <div className="flex h-screen">
             <div className="hidden md:block w-5/12 h-full bg-maindark bg-auth-aside bg-cover px-10 relative">
                 <div className="max-w-[440px] mx-auto">
-                    <img src="/images/logo.png" className="mx-auto my-20" alt="logo" />
+                    <img src={Logo} className="mx-auto my-20" alt="logo" />
                     <h1 className="text-4xl font-bold my-4">Welcome Back!</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                <img src="/images/provectus_logo.svg" className="absolute bottom-20 left-[50%] transform -translate-x-1/2" alt="logo" />
+                <img src={ProvectusLogo} className="absolute bottom-20 left-[50%] transform -translate-x-1/2" alt="logo" />
             </div>
             <div className="w-full h-full md:w-7/12 sm:px-2 md:px-10">
                 <div className="w-full h-full flex items-center relative">

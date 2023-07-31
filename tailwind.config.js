@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "auth-aside": "url('../public/images/login_aside.png')",
+        "auth-aside": "url('../src/assets/images/login_aside.png')",
         "auth-btn": "linear-gradient(90deg, #D0BC31 0%, #F19123 100%)"
       },
       colors: {
