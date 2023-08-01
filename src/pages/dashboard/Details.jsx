@@ -8,9 +8,9 @@ import CameraIcon from "../../assets/images/camera.svg";
 import { Map } from '@googlemaps/react-wrapper'
 
 const Details = () => {
-  return <div className="flex justify-between pl-[38px] pr-11 pt-9">
-    <div className="shrink-0 w-[709px] mr-9">
-      <div className="flex mb-8">
+  return <div className="flex flex-col md:flex-row md:justify-between px-4 md:pl-[38px] md:pr-11 pt-4 md:pt-9 pb-4">
+    <div className="shrink-0 w-full md:w-[709px] mr-9">
+      <div className="flex mb-4 md:mb-8">
         <div className="flex mr-3">
           <div className="flex justify-center items-center w-[51px] h-[51px] rounded-[11.6px] bg-lightdark mr-[11.6px]">
             <img src={MonitorIcon} alt="monitor" className="w-7 h-7" />
@@ -22,12 +22,12 @@ const Details = () => {
         </div>
         <span className="flex self-end py-3 px-5 rounded-[10px] bg-lightdark font-semibold text-xs text-[#DFDFDF]">Rename</span>
       </div>
-      <div className="flex w-full h-[94px] py-2 mb-8 bg-lightdark rounded-[14.5px]">
-        <div className="flex flex-col pl-6 pr-11 py-2 border-r border-lightdark-border">
+      <div className="flex flex-col md:flex-row w-full md:h-[94px] py-2 px-5 md:px-0 mb-8 bg-lightdark rounded-[14.5px]">
+        <div className="flex flex-col md:pl-6 md:pr-11 py-2 md:border-r border-lightdark-border">
           <span className="font-semibold text-[13.64px] mb-[9px]">Uptime</span>
           <span className="font-semibold text-base text-transparent bg-clip-text bg-yellow-text">4H 20M</span>
         </div>
-        <div className="flex flex-col pl-[33px] pr-[39px] py-2 border-r border-lightdark-border">
+        <div className="flex flex-col md:pl-[33px] md:pr-[39px] py-2 md:border-r border-lightdark-border">
           <span className="font-semibold text-[13.64px] mb-[9px]">Last Update</span>
           <div className="flex">
             <div className="mr-[29px]">
@@ -40,7 +40,7 @@ const Details = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col pl-10 pr-[55px] py-2">
+        <div className="flex flex-col md:pl-10 md:pr-[55px] py-2">
           <span className="font-semibold text-[13.64px] mb-[9px]">Number of Active Devices</span>
           <div className="flex">
             <div className="mr-[30px]">
@@ -59,13 +59,13 @@ const Details = () => {
         </div>
       </div>
       <p className="font-semibold text-[18.246px] mb-5">Device Status</p>
-      <div className="grid grid-cols-3 gap-x-[26px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-y-2 md:gap-x-[26px]">
         <Status icon={MicroIcon} title="Microphone" comment="Active for 3 hours" quality="5Kwh" />
         <Status icon={LocationIcon} title="GPS" comment="Active for 3 hours" quality="5Kwh" />
         <Status icon={CameraIcon} title="Cameras" comment="Active for 3 hours" quality="5Kwh" />
       </div>
     </div>
-    <div className="mt-[6px] w-full min-w-[361px] p-[10px] aspect-video rounded-[18.1px] bg-lightdark">
+    <div className="mt-4 md:mt-[6px] w-full p-[10px] aspect-video rounded-[18.1px] bg-lightdark">
       {/* <Map apiKey="Your_Api_key" /> */}
     </div>
   </div>
