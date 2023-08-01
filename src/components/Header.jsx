@@ -8,7 +8,7 @@ import Menu from "../assets/images/menu.png";
 
 const Header = props => {
   const {toggleSidebar} = props;
-	return <div className="flex flex-col-reverse md:flex-row justify-between items-center w-full h-auto md:h-[100px] px-4 py-4 md:py-0 md:pl-[38px] md:pr-12">
+	return <div className="flex flex-col-reverse lg:flex-row justify-between items-center w-full h-auto lg:h-[100px] px-4 py-4 lg:py-0 lg:pl-[38px] lg:pr-12">
     <div className="flex items-center">
       <span className="hidden md:flex font-semibold text-[28px] mr-10">Welcome Max</span>
       <div className="flex items-center px-[15px] w-[346px] h-10 rounded-[10px] bg-lightdark">

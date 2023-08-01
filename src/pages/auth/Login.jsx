@@ -1,21 +1,29 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import ProvectusLogo from '../../assets/images/provectus_logo.svg';
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    // when click the login button
+    const handleLogin = () => {
+        navigate('/device/details');
+    }
+
     return <>
         <div className="flex h-screen">
-            <div className="hidden md:block w-5/12 h-full bg-maindark bg-auth-aside bg-cover px-10 relative">
+            <div className="hidden md:flex w-5/12 h-full bg-maindark bg-auth-aside bg-cover px-10 relative items-center">
                 <div className="max-w-[440px] mx-auto">
-                    <img src={Logo} className="mx-auto my-20" alt="logo" />
+                    <img src={Logo} className="mx-auto mb-20" alt="logo" />
                     <h1 className="text-4xl font-bold my-4">Welcome Back!</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <img src={ProvectusLogo} className="mt-56" alt="logo" />
                 </div>
-                <img src={ProvectusLogo} className="absolute bottom-20 left-[50%] transform -translate-x-1/2" alt="logo" />
             </div>
             <div className="w-full h-full md:w-7/12 sm:px-2 md:px-10">
                 <div className="w-full h-full flex items-center relative">
-                    <div className="mx-auto lg:mx-32">
+                    <div className="mx-auto lg:mx-40 2xl:mx-56">
                         <h1 className="text-2xl py-3 font-semibold text-center md:text-left">Welcome back!</h1>
                         <p className="text-sm mb-12 text-center md:text-left">Log in to get started.</p>
 
@@ -29,7 +37,9 @@ const Login = () => {
                         </div>
 
                         <div className="w-full">
-                            <button className="rounded-lg bg-auth-btn w-full py-3 text-sm" type="button">Sign in</button>
+                            <button 
+                                onClick={()=>handleLogin()}
+                                className="rounded-lg bg-auth-btn w-full py-3 text-sm" type="button">Sign in</button>
                         </div>
                         <div className="flex justify-between items-center py-6">
                             <div className="w-10 h-[2px] bg-[#EDF2F7]"></div>

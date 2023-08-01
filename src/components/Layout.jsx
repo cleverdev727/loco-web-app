@@ -13,11 +13,11 @@ const Layout = () => {
   return (
     <div className="flex">
       <Sidebar open={isSidebarOpen} toggleSidebar={toggleSidebar} />
-      <div className="w-full">
-        <Header toggleSidebar={toggleSidebar} />
-        <div>
-          <Outlet />
-        </div>
+      <div className="w-full md:w-[calc(100%-250px)]">
+          <Header toggleSidebar={toggleSidebar} />
+          <div>
+            <Outlet />
+          </div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import DetailIcon from "../assets/images/details.svg";
 import SearchIcon from "../assets/images/search.svg";
+import SettingIcon from "../assets/images/setting.svg";
 import ActiveTabIcon from "../assets/images/active-tab.svg";
 import ProvectusLogo from "../assets/images/provectus_logo.svg";
 
@@ -21,6 +22,11 @@ const Sidebar = props => {
       href: "/device/search",
       icon: SearchIcon,
     },
+    {
+      title: "Setting",
+      href: "/setting",
+      icon: SettingIcon,
+    }
   ];
 
   return <div className={(open ? "flex" : "hidden") + " absolute md:relative z-10 md:flex flex-col w-[251px] h-screen pb-16 bg-maindark"}>
@@ -38,7 +44,7 @@ const Sidebar = props => {
             }
             <Link to={item.href} className="flex items-center ml-10" onClick={() => toggleSidebar()}>
               <img src={item.icon} alt="" className={"w-6 h-6 mr-5" + (pathname !== item.href ? ' opacity-30' : '')} />
-              <span>{item.title}</span>
+              <span className={(pathname !== item.href ? ' opacity-30' : '')}>{item.title}</span>
             </Link>
           </li>
         ))}

@@ -11,6 +11,7 @@ function App() {
     <div>
       <Routes>
         <Route index element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/device" element={<Layout />}>
           <Route path="/device/details" element={<DeviceDetails />} />
           <Route path="/device/search" element={<DeviceSearch />} />
