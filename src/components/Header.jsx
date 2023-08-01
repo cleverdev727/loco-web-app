@@ -11,7 +11,7 @@ const Header = () => {
       <span className="flex font-semibold text-[28px] mr-10">Welcome Max</span>
       <div className="flex items-center px-[15px] w-[346px] h-10 rounded-[10px] bg-lightdark">
         <img src={SearchIcon} alt="search" className="w-[18px] h-[18px] opacity-30 mr-[7px]" />
-        <input type="text" className="w-full h-[18px] bg-transparent outline-none font-normal text-xs" placeholder="Search Devices" />
+        <input type="text" className="w-full h-[18px] bg-transparent outline-none font-normal text-xs placeholder:text-lightdark-font" placeholder="Search Devices" />
       </div>
     </div>
     <div className="flex items-center">
