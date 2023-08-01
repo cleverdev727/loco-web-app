@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import DetailIcon from "../assets/images/details.svg";
 import SearchIcon from "../assets/images/search.svg";
@@ -16,7 +16,7 @@ const Sidebar = () => {
     },
     {
       title: "Device Search",
-      href: "/search",
+      href: "/device/search",
       icon: SearchIcon,
     },
   ];
@@ -27,19 +27,19 @@ const Sidebar = () => {
         <img
           src={Logo}
           alt="logo"
-          className="w-[79px] h-[76px] mt-7 ml-[38px] mb-[35px]"
+          className="w-[79px] h-[76px] mt-7 ml-[38px] mb-[15px]"
         />
         <div className="relative flex flex-col justify-between w-full h-full">
           <ul className="font-semibold text-sm">
             {items.map((item, index) => (
-              <li key={index} className="relative flex mb-10">
+              <li key={index} className="relative flex py-5">
                 {
                   pathname == item.href ? <img src={ActiveTabIcon} alt="active-tab" className="absolute w-[7px] h-8 top-1/2 -translate-y-1/2" /> : ''
                 }
-                <div className="flex items-center ml-10">
+                <Link to={item.href} className="flex items-center ml-10">
                   <img src={item.icon} alt="" className={"w-6 h-6 mr-5" + (pathname !== item.href ? ' opacity-30' : '')} />
                   <span>{item.title}</span>
-                </div>
+                </Link>
               </li>
             ))}
           </ul>

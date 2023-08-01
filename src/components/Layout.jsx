@@ -1,13 +1,14 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import Header from "./Header";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div>
-        <div>Topbar</div>
+      <div className="w-full">
+        <Header />
         <div>
           <Outlet />
         </div>
