@@ -14,7 +14,7 @@ const Sidebar = props => {
   const items = [
     {
       title: "Device Details",
-      href: "/device/details/:id",
+      href: "/device/details",
       icon: DetailIcon,
     },
     {

@@ -64,14 +64,14 @@ const DeviceSearch = props => {
     <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-8">
       {
         devices.map((device, index) => (
-          <Link to={`/device/details/${device.uuid}`}>
+          // <Link to={`/device/details/${device.uuid}`}>
             <DeviceCard
               key={index}
               deviceName={device.name}
               ddate={formatDate(device.lastUpdateTimestamp)[0]}
               dtime={formatDate(device.lastUpdateTimestamp)[1]}
             />
-          </Link>
+          // </Link>
         ))
       }
       {/* <DeviceCard

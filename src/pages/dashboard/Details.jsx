@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
 import Status from "../../components/Status";
 import MonitorIcon from "../../assets/images/monitor.svg";
 import MicroIcon from "../../assets/images/micro.svg";
@@ -11,7 +10,6 @@ import API from '../../API';
 import { Map } from '@googlemaps/react-wrapper'
 
 const Details = () => {
-  const {id} = useParams();
   const [device, setDevice] = useState({
     "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx3",
     "cameraCount": 0,
@@ -26,8 +24,10 @@ const Details = () => {
   });
 
   useEffect(() => {
-    // API.devices.show(id).then(res => {
-    //   setDevice(res.data);
+    // API.devices.all().then(res => {
+    //   API.devices.show(res.data.items[0].uuid).then(response => {
+    //     setDevice(response.data);
+    //   });
     // });
   }, []);
 
