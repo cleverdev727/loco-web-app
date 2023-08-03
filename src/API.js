@@ -20,8 +20,9 @@ API.auth = {
 /**
  * Users
  */
-API.users = {
-
+API.devices = {
+  all: () => API.get('/device/info/all'),
+  show: id => API.get(`/device/info/${id}`)
 };
 
 export default API;

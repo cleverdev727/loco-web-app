@@ -7,13 +7,13 @@ import Avatar from "../assets/images/Avatar.png";
 import Menu from "../assets/images/menu.png";
 
 const Header = props => {
-  const {toggleSidebar} = props;
+  const {toggleSidebar, search, handleChangeSearch} = props;
 	return <div className="flex flex-col-reverse lg:flex-row justify-between items-center w-full h-auto lg:h-[100px] px-4 py-4 lg:py-0 lg:pl-[38px] lg:pr-12">
     <div className="flex items-center">
       <span className="hidden md:flex font-semibold text-[28px] mr-10">Welcome Max</span>
       <div className="flex items-center px-[15px] w-[346px] h-10 rounded-[10px] bg-lightdark">
         <img src={SearchIcon} alt="search" className="w-[18px] h-[18px] opacity-30 mr-[7px]" />
-        <input type="text" className="w-full h-[18px] bg-transparent outline-none font-normal text-xs placeholder:text-lightdark-font" placeholder="Search Devices" />
+        <input type="text" className="w-full h-[18px] bg-transparent outline-none font-normal text-xs placeholder:text-lightdark-font" placeholder="Search Devices" value={search} onChange={e => handleChangeSearch(e.target.value)} />
       </div>
     </div>
     <div className="flex w-full justify-between md:w-auto items-center mb-2 md:mb-0">
